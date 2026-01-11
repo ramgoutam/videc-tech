@@ -1,0 +1,64 @@
+import { Boxes, Cog, FileText, Printer, Wrench, Gauge } from "lucide-react";
+import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects";
+
+const services = [
+  {
+    icon: <Boxes />,
+    title: "3D Modeling",
+    description: "Precise 3D CAD models for manufacturing, visualization, and prototyping with industry-leading accuracy.",
+  },
+  {
+    icon: <Cog />,
+    title: "Industrial Design",
+    description: "Innovative product designs that blend aesthetics with functionality for market-ready solutions.",
+  },
+  {
+    icon: <Wrench />,
+    title: "Tool Design",
+    description: "Custom tooling solutions including molds, fixtures, and jigs optimized for production efficiency.",
+  },
+  {
+    icon: <FileText />,
+    title: "Technical Drawings",
+    description: "Detailed engineering drawings with GD&T specifications ready for manufacturing.",
+  },
+  {
+    icon: <Printer />,
+    title: "3D Print Design",
+    description: "Optimized designs for additive manufacturing with support for all major 3D printing technologies.",
+  },
+  {
+    icon: <Gauge />,
+    title: "Mold Flow Analysis",
+    description: "Advanced simulation to optimize injection molding processes and prevent defects.",
+  },
+];
+
+const ServicesSection = () => {
+  return (
+    <section id="services" className="py-24 bg-muted/30">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">What We Offer</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
+            Engineering Excellence
+            <br />
+            <span className="gradient-text">Under One Roof</span>
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            From concept to production, we provide comprehensive design and engineering services
+            tailored to meet your specific needs.
+          </p>
+        </div>
+
+        {/* New Features Section */}
+        <div className="w-full">
+          <FeaturesSectionWithHoverEffects features={services} />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
