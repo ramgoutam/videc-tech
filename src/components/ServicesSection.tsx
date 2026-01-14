@@ -1,34 +1,34 @@
 import { Boxes, Cog, FileText, Printer, Wrench, Gauge } from "lucide-react";
-import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 const services = [
   {
-    icon: <Boxes />,
+    icon: <Boxes className="h-6 w-6" />,
     title: "3D Modeling",
     description: "Precise 3D CAD models for manufacturing, visualization, and prototyping with industry-leading accuracy.",
   },
   {
-    icon: <Cog />,
+    icon: <Cog className="h-6 w-6" />,
     title: "Industrial Design",
     description: "Innovative product designs that blend aesthetics with functionality for market-ready solutions.",
   },
   {
-    icon: <Wrench />,
+    icon: <Wrench className="h-6 w-6" />,
     title: "Tool Design",
     description: "Custom tooling solutions including molds, fixtures, and jigs optimized for production efficiency.",
   },
   {
-    icon: <FileText />,
+    icon: <FileText className="h-6 w-6" />,
     title: "Technical Drawings",
     description: "Detailed engineering drawings with GD&T specifications ready for manufacturing.",
   },
   {
-    icon: <Printer />,
+    icon: <Printer className="h-6 w-6" />,
     title: "3D Print Design",
     description: "Optimized designs for additive manufacturing with support for all major 3D printing technologies.",
   },
   {
-    icon: <Gauge />,
+    icon: <Gauge className="h-6 w-6" />,
     title: "Mold Flow Analysis",
     description: "Advanced simulation to optimize injection molding processes and prevent defects.",
   },
@@ -52,9 +52,9 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* New Features Section */}
-        <div className="w-full">
-          <FeaturesSectionWithHoverEffects features={services} />
+        {/* Hover Effect Features Section */}
+        <div className="max-w-7xl mx-auto">
+          <HoverEffect items={services} />
         </div>
       </div>
     </section>
