@@ -128,7 +128,7 @@ export const CardTransformed = React.forwardRef<
 
         const isLastCard = index === arrayLength;
         const y = useTransform(scrollYProgress, range, ["0%", isLastCard ? "0%" : "-300%"])
-        const opacity = 1;
+        const opacity = useTransform(scrollYProgress, range, [1, isLastCard ? 1 : 0])
 
         const rotate = useTransform(scrollYProgress, rotateRange, [
             incrementRotation,
