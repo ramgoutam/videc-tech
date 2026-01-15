@@ -1,22 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/Slow_Motion_Video_Loop_Generation.mp4";
 
 const HeroSection = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
-      
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 gradient-hero opacity-80" />
-      
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
@@ -44,7 +49,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto animate-slide-up stagger-1">
-            Expert engineering and design solutions tailored to bring your ideas to life. 
+            Expert engineering and design solutions tailored to bring your ideas to life.
             From concept to production, we deliver precision and innovation.
           </p>
 
